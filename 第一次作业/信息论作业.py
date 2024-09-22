@@ -43,12 +43,12 @@ def main(file_path):
     I_XY = calculate_mutual_information(H_X, H_Y, H_XY)
     
     # 打印结果
-    print(f"H(X): {H_X}")
-    print(f"H(Y): {H_Y}")
-    print(f"H(X, Y): {H_XY}")
-    print(f"H(X|Y): {H_X_given_Y}")
-    print(f"H(Y|X): {H_Y_given_X}")
-    print(f"I(X; Y): {I_XY}")
+    print("H(X) = -\\sum_{X}^{} \\sum_{Y}^{} p (x_{i} y_{j} )log_{2} p(x_{i} ) = "f"{H_X}")
+    print("H(Y) = -\\sum_{X}^{} \\sum_{Y}^{} p (x_{i} y_{j} )log_{2} p(y_{j} ) = "f"{H_Y}")
+    print("H(XY) = -\\sum_{X}^{} \\sum_{Y}^{} p (x_{i} y_{j} )log_{2} p(x_{i} y_{j} ) = "f"{H_XY}")
+    print("H(X|Y) = -\\sum_{X}^{} \\sum_{Y}^{} p (x_{i} y_{j} )log_{2} \\frac{p(x_{i} y_{j} )}{p(y_{j}) }  ="f" {H_X_given_Y}")
+    print("H(Y|X) = -\\sum_{X}^{} \\sum_{Y}^{} p (x_{i} y_{j} )log_{2} \\frac{p(x_{i} y_{j} )}{p(x_{i}) }  ="f" {H_Y_given_X}")
+    print(f"I(X; Y)=H(X)+H(Y)-H(XY) = {I_XY}")
 
 # 示例用法
 # main('路径到你的excel文件.xlsx')
